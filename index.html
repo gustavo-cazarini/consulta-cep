@@ -8,7 +8,53 @@
     <title>Consulta CEP</title>
 </head>
 <body>
-    
+    <div class="search_field">
+        <label for="inp_cep">CEP:</label>
+        <input type="text" min="8" max="8" id="inp_cep" />
+        <button id="btn_search" class="btn btn_search">Search</button>
+        <button type="reset" id="btn_reset" class="btn btn_reset">Reset</button>
+    </div>
+    <hr/>
+    <div class="table_field">
+        <table>
+            <tr>
+                <th>CEP</th>
+                <th>Logradouro</th>
+                <th>Bairro</th>
+                <th>Localidade</th>
+                <th>UF</th>
+                <th>DDD</th>
+            </tr>
+            <tr>
+                <td id="cep_inf">xxxx</td>
+                <td id="log_inf">xxxx</td>
+                <td id="bairro_inf">xxxx</td>
+                <td id="local_inf">xxxx</td>
+                <td id="uf_inf">xxxx</td>
+                <td id="ddd_inf">xxxx</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <div class="flex_container">
+            <div>
+                <a href="https://github.com/gustavo-cazarini" class="social_link" target="_blank">
+                    <img src="github-logo.png" alt="GitHub Logo">
+                    <p>GitHub</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/gustavo-messa-cazarini-36a200171/" class="social_link" target="_blank">
+                    <img src="linkedin-logo.png" alt="LinkedIn Logo">
+                    <p>Linkedin</p>
+                </a>
+            </div>
+        </div>
+        <hr class="footer_hr"/>
+        <p>&copy; Gustavo Messa Cazarini</p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
