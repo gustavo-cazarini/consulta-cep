@@ -11,8 +11,8 @@
     <div class="search_field">
         <label for="inp_cep">CEP:</label>
         <input type="text" min="8" max="8" id="inp_cep" />
-        <button id="btn_search" class="btn btn_search">Search</button>
-        <button type="reset" id="btn_reset" class="btn btn_reset">Reset</button>
+        <button id="btn_search" class="btn btn_search" title="Search for a valid CEP">Search</button>
+        <button type="reset" id="btn_reset" class="btn btn_reset" title="Reset the inputed value">Reset</button>
     </div>
     <hr/>
     <div class="table_field">
@@ -40,19 +40,19 @@
         <div class="flex_container">
             <div>
                 <a href="https://github.com/gustavo-cazarini" class="social_link" target="_blank">
-                    <img src="github-logo.png" alt="GitHub Logo">
+                    <div id="github"></div>
                     <p>GitHub</p>
                 </a>
             </div>
             <div>
                 <a href="https://www.linkedin.com/in/gustavo-messa-cazarini-36a200171/" class="social_link" target="_blank">
-                    <img src="linkedin-logo.png" alt="LinkedIn Logo">
+                    <div id="linkedin"></div>
                     <p>Linkedin</p>
                 </a>
             </div>
         </div>
         <hr class="footer_hr"/>
-        <p>&copy; Gustavo Messa Cazarini</p>
+        <p on>&copy; Gustavo Messa Cazarini</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

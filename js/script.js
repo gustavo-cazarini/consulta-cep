@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#inp_cep').focus();
     $('#inp_cep').mask('00000-000');
 
-    $('#btn_search').click(function () {
+    function search(){
         var cep = $('#inp_cep').cleanVal();
         if ($.isNumeric(cep) == true) {
             if (cep.length != 8) {
@@ -17,11 +17,21 @@ $(document).ready(function () {
             alert("Digite somente números!");
             $('#inp_cep').focus();
         }
+    }
+
+    $('#btn_search').click(function () {
+        search();
     });
 
     $('#btn_reset').click(function () {
         $('#inp_cep').val("");
         $('#inp_cep').focus();
+        $('#cep_inf').html('- - - -');
+        $('#log_inf').html('- - - -');
+        $('#bairro_inf').html('- - - -');
+        $('#local_inf').html('- - - -');
+        $('#uf_inf').html('- - - -');
+        $('#ddd_inf').html('- - - -');
     });
 
     function ajaxRequest(cep){
@@ -45,9 +55,12 @@ $(document).ready(function () {
         });
     }
 
-    $(document).keypress(function (e) { 
-        if(e.which == 13){
-            $('#btn_search').click();
+    $(document).keyup(function(event) {
+        if (event.which === 13) {
+            $('#btn-search').click(search());
         }
     });
+
+    $('#github').load('../svg/github.svg');
+    $('#linkedin').load('../svg/linkedin.svg');
 });
